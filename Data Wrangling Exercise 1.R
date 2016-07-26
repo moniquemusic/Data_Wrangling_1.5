@@ -58,3 +58,6 @@ electronics <- electronics %>% mutate(product_smartphone = (ifelse(electronics$p
 electronics <- electronics %>% mutate(product_TV = (ifelse(electronics$products == "TV", 1, 0)))
 electronics <- electronics %>% mutate(product_laptop = (ifelse(electronics$products == "laptop", 1, 0)))
 electronics <- electronics %>% mutate(product_tablet = (ifelse(electronics$products == "tablet", 1, 0)))
+
+#turn "electronics" dataframe into "refine.clean.csv"
+write.csv(x = electronics, file = "refine.clean.csv", row.names = FALSE)
